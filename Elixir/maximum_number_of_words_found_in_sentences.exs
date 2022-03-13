@@ -15,6 +15,6 @@ defmodule Solution do
     end
 
     def most_words_found(sentences) do
-      count_spaces(sentences)
+      count_spaces(sentences) + 1
     end
 end
