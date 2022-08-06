@@ -4,7 +4,7 @@
 defmodule Solution do
   def prefix_count(words, pref) do
     words
-    |> Enum.filter(&String.starts_with?(&1, pref))
+    |> Stream.filter(&String.starts_with?(&1, pref))
     |> Enum.count()
   end
 end
