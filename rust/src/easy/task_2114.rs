@@ -5,15 +5,15 @@ use crate::Solution;
 
 impl Solution {
     pub fn most_words_found(sentences: Vec<String>) -> i32 {
-        let mut maximum_words: i32 = 0;
+        let mut maximum_words: usize = 0;
         for s in sentences.iter() {
             let slice: Vec<&str> = s[..s.len()].split(" ").collect();
-            match slice.len() > maximum_words.try_into().unwrap() {
-                true => maximum_words = slice.len() as i32,
+            match slice.len() > maximum_words {
+                true => maximum_words = slice.len(),
                 false => continue,
             };
         }
-        maximum_words 
+        maximum_words as i32
     }
 
     pub fn another_most_words_found(sentences: Vec<String>) -> i32 {
