@@ -29,49 +29,49 @@ mod tests {
 
     #[test]
     fn test_1() {
-        assert_eq!(3, Solution::most_words_found(
-            vec![
-                "please wait".to_string(), 
-                "continue to fight".to_string(), 
+        assert_eq!(
+            3,
+            Solution::most_words_found(vec![
+                "please wait".to_string(),
+                "continue to fight".to_string(),
                 "continue to win".to_string(),
-                ]
-            )
+            ])
         );
     }
 
     #[test]
     fn test_2() {
-        assert_eq!(6, Solution::most_words_found(
-            vec![
-                "alice and bob love leetcode".to_string(), 
-                "i think so too".to_string(), 
+        assert_eq!(
+            6,
+            Solution::most_words_found(vec![
+                "alice and bob love leetcode".to_string(),
+                "i think so too".to_string(),
                 "this is great thanks very much".to_string(),
-                ]
-            )
+            ])
         );
     }
 
     #[test]
     fn test_3() {
-        assert_eq!(3, Solution::another_most_words_found(
-            vec![
-                "please wait".to_string(), 
-                "continue to fight".to_string(), 
+        assert_eq!(
+            3,
+            Solution::another_most_words_found(vec![
+                "please wait".to_string(),
+                "continue to fight".to_string(),
                 "continue to win".to_string(),
-                ]
-            )
+            ])
         );
     }
 
     #[test]
     fn test_4() {
-        assert_eq!(6, Solution::another_most_words_found(
-            vec![
-                "alice and bob love leetcode".to_string(), 
-                "i think so too".to_string(), 
+        assert_eq!(
+            6,
+            Solution::another_most_words_found(vec![
+                "alice and bob love leetcode".to_string(),
+                "i think so too".to_string(),
                 "this is great thanks very much".to_string(),
-                ]
-            )
+            ])
         );
     }
 }

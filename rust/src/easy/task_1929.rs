@@ -5,7 +5,7 @@ use crate::Solution;
 
 impl Solution {
     pub fn get_concatenation(nums: Vec<i32>) -> Vec<i32> {
-        let clone_array = nums.clone();    
+        let clone_array = nums.clone();
         [nums, clone_array].concat()
     }
 
@@ -14,7 +14,7 @@ impl Solution {
         for i in 0..n {
             nums.push(nums[i]);
         }
-    
+
         nums
     }
 
@@ -48,7 +48,7 @@ mod tests {
     #[test]
     fn test_1() {
         assert_eq!(
-            Solution::get_concatenation(vec![1, 2, 3]), 
+            Solution::get_concatenation(vec![1, 2, 3]),
             vec![1, 2, 3, 1, 2, 3]
         );
     }
@@ -60,7 +60,7 @@ mod tests {
             vec![1, 2, 3, 1, 2, 3]
         );
     }
-    
+
     #[test]
     fn test_3() {
         assert_eq!(

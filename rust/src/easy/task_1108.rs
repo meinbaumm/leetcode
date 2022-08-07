@@ -15,11 +15,17 @@ mod tests {
 
     #[test]
     fn test_1() {
-        assert_eq!("1[.]1[.]1[.]1", Solution::defang_i_paddr("1.1.1.1".to_string()));
+        assert_eq!(
+            "1[.]1[.]1[.]1",
+            Solution::defang_i_paddr("1.1.1.1".to_string())
+        );
     }
 
     #[test]
     fn test_2() {
-        assert_eq!("255[.]100[.]50[.]0", Solution::defang_i_paddr("255.100.50.0".to_string()));
+        assert_eq!(
+            "255[.]100[.]50[.]0",
+            Solution::defang_i_paddr("255.100.50.0".to_string())
+        );
     }
 }
