@@ -40,9 +40,8 @@ defmodule Easy.Task1572 do
   end
 
   defp diag_sum(mat, {1, 1}) do
-    mat
-    |> Enum.at(0)
-    |> Enum.at(0)
+    [[sum]] = mat
+    sum
   end
 
   defp diag_sum(mat, {m, n}) do

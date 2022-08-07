@@ -3,9 +3,8 @@ defmodule Easy.Task1816 do
   1816. Truncate Sentence
   https://leetcode.com/problems/truncate-sentence/
   """
-  @spec truncate_sentence(s :: String.t, k :: integer) :: String.t
+  @spec truncate_sentence(s :: String.t(), k :: integer) :: String.t()
   def truncate_sentence(s, k) do
-
     truncated =
       String.split(s, " ")
       |> Stream.take(k)
@@ -13,6 +12,6 @@ defmodule Easy.Task1816 do
         acc_string <> word <> " "
       end)
 
-  String.replace_trailing(truncated, String.at(truncated, -1), "")
+    String.replace_trailing(truncated, String.at(truncated, -1), "")
   end
 end
