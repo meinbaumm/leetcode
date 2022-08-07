@@ -25,4 +25,4 @@ eee-*.tar
 # Temporary files, for example, from tests.
 /tmp/
 
-keep.txt
+keep.md
