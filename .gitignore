@@ -6,3 +6,4 @@
 rust/target
 rust/Cargo.lock
 rust/src/main.rs
+_ex

@@ -1,15 +1,16 @@
-# https://leetcode.com/problems/add-two-numbers/
-# 2. Add Two Numbers
-
 defmodule ListNode do
   @type t :: %__MODULE__{
-          val: integer,
-          next: ListNode.t() | nil
-        }
+    val: integer,
+    next: ListNode.t() | nil
+  }
   defstruct val: 0, next: nil
 end
 
-defmodule Solution do
+defmodule Task2 do
+  @moduledoc """
+  2. Add Two Numbers
+  https://leetcode.com/problems/add-two-numbers/
+  """
   def add_two_numbers(l1, l2) do
     get_value(l1, l2, 0)
   end

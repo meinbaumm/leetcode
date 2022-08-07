@@ -1,9 +1,11 @@
-# https://leetcode.com/problems/valid-parentheses/
-# 20. Valid Parentheses
-# Given a string s containing just the characters '(', ')', '{', '}', '[' and ']',
-# determine if the input string is valid.
 
-defmodule Solution do
+defmodule Task20 do
+  @moduledoc """
+  20. Valid Parentheses
+  https://leetcode.com/problems/valid-parentheses/
+  Given a string s containing just the characters '(', ')', '{', '}', '[' and ']',
+  determine if the input string is valid.
+  """
   @valid_pairs [{"(", ")"}, {"[", "]"}, {"{", "}"}]
 
   defguard is_open_bracket(value) when value == "(" or value == "[" or value == "{"

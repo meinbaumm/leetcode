@@ -2,7 +2,7 @@ defmodule Task771Test do
   use ExUnit.Case
   doctest Task771
 
-  test "capitalize the title" do
+  test "Jewels and Stones" do
     jewels1 = "aA"
     stones1 = "aAAbbbb"
     assert Task771.num_jewels_in_stones(jewels1, stones1) == 3
