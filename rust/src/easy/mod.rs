@@ -5,5 +5,6 @@ pub mod task_2114;
 pub mod task_2235;
 pub mod task_2264;
 pub mod task_00169;
+pub mod task_00202;
 // pub mod task_2239;
 // pub mod task_2248;
