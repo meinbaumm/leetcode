@@ -1,20 +1,20 @@
 // 169. Majority Element
 // https://leetcode.com/problems/majority-element/
 
-use std::collections::HashMap;
 use crate::Solution;
+use std::collections::HashMap;
 
 impl Solution {
     pub fn majority_element(nums: Vec<i32>) -> i32 {
-
-        let max = nums.into_iter()
-        .fold(HashMap::<i32, usize>::new(), |mut m, x| {
-            *m.entry(x).or_default() += 1;
-            m
-        })
-        .into_iter()
-        .max_by_key(|(_, v)| *v)
-        .map(|(k, _)| k);        
+        let max = nums
+            .into_iter()
+            .fold(HashMap::<i32, usize>::new(), |mut m, x| {
+                *m.entry(x).or_default() += 1;
+                m
+            })
+            .into_iter()
+            .max_by_key(|(_, v)| *v)
+            .map(|(k, _)| k);
 
         if let Some(val) = max {
             return val;
