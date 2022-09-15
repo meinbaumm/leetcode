@@ -54,6 +54,21 @@ impl Solution {
             }
         }
     }
+
+    pub fn add_digits_recursive(mut num: i32) -> i32 {
+        let mut sum = 0;
+
+        while num != 0 {
+            sum += num % 10;
+            num /= 10;
+        }
+
+        if sum < 10 {
+            return sum;
+        } else {
+            return Self::add_digits_recursive(sum);
+        }
+    }
 }
 
 #[cfg(test)]
@@ -98,5 +113,15 @@ mod tests {
     #[test]
     fn test_8() {
         assert_eq!(2, Solution::add_digits_simple(38));
+    }
+
+    #[test]
+    fn test_9() {
+        assert_eq!(3, Solution::add_digits_recursive(3));
+    }
+
+    #[test]
+    fn test_10() {
+        assert_eq!(2, Solution::add_digits_recursive(38));
     }
 }
