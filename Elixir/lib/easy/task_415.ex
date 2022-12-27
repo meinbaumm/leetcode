@@ -4,10 +4,6 @@ defmodule Easy.Task415 do
   https://leetcode.com/problems/add-strings/
   """
 
-  # One test case is not solved when
-  # num1 = "401716832807512840963"
-  # num2 = "167141802233061013023557397451289113296441069"
-
   require Integer
 
   def add_strings_simple(num1, num2) do
@@ -30,7 +26,7 @@ defmodule Easy.Task415 do
   end
 
   defp add({[head | tail], len, acc}) do
-    updated_acc = trunc(compare_and_replace(head) * :math.pow(10, len - 1)) + acc
+    updated_acc = compare_and_replace(head) * Integer.pow(10, len - 1) + acc
     add({tail, len - 1, updated_acc})
   end
 
